@@ -94,6 +94,11 @@ header button svg .fill {
   padding: 16px;
   margin: 0px;
 }
+
+.container p {
+  text-align: center;
+  color: #d8e5e0;
+}
 ul.todo {
   width:         calc(100% - 100px);
   float: left;
@@ -206,20 +211,4 @@ ul.todo#completed li > div.buttons button.complete svg .fill{
 
 ul.todo li > div.buttons button.complete svg .fill{
   fill: #25b99a;
-}
-
-ul.todo#completed:not(:empty){
-  position: relative;
-
-}
-ul.todo#completed:not(:empty):before {
-  content: '';
-  width: 150px;
-  float: left;
-  height: 1px;
-  background: #d8e5e0;
-  position: absolute;
-  top: 30px
-  left: 50px;
-  margin: 0 0 0 0px;
 }
