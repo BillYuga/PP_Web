@@ -97,7 +97,7 @@ header button svg .fill {
 
 .container p {
   text-align: center;
-  color: #d8e5e0;
+  color: #aaa;
 }
 ul.todo {
   width:         calc(100% - 100px);
@@ -109,6 +109,7 @@ ul.todo li{
   float: left;
   /*min-height: 50px;*/
   list-style: none;
+  word-wrap:break-word;
   border-radius: 5px;
   background: #ffffff;
   position: relative;
@@ -211,4 +212,21 @@ ul.todo#completed li > div.buttons button.complete svg .fill{
 
 ul.todo li > div.buttons button.complete svg .fill{
   fill: #25b99a;
+}
+
+ul.todo#todo:empty:after {
+  content: 'You have nothing to do!';
+}
+ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks';
+}
+
+ul.todo#todo:empty:after,
+ul.todo#completed:empty:after {
+  width: calc(100% + 14px);
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding-left: 0px;
+  color: #d8e5e0;
 }
